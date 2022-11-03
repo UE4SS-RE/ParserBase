@@ -1,0 +1,26 @@
+.git/
+
+# Visual Studio
+.vs/
+
+# CLion
+# Not ignoring CLion files as I want the project targets & settings, inspections etc to be able to be shared
+
+_ReSharper.Caches/
+cmake-build-debug/
+CMakeFiles/
+
+# Cached files
+_ReSharper.Caches/
+
+# Binaries & Intermediates
+Output/
+
+# Others
+*.tlog
+*.log
+*.obj
+*.idb
+*.pdb
+*.lastbuildstate
+*.recipe
