@@ -20,7 +20,9 @@ namespace RC::ParserBase
             throw std::runtime_error{ "Tried retrieving data of a token that doesn't have any data" };
         }
 
-        return m_data.substr(token.get_start(), token.get_end() - token.get_start() + 1);
+        auto data = m_data.substr(token.get_start(), token.get_end() - token.get_start() + 1);
+        data.erase(std::find(data.begin(), data.end(), STR('\0')), data.end());
+        return data;
     }
 
     /*
