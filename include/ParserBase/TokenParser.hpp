@@ -35,7 +35,7 @@ namespace RC::ParserBase
 
     private:
         const class Tokenizer& m_tokenizer;
-        const File::StringType m_data;
+        mutable File::StringType m_data;
 
     protected:
         mutable size_t m_current_token_index_being_parsed{0};
